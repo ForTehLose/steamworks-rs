@@ -443,7 +443,7 @@ where
 
     pub fn networking_messages(&self) -> networking_messages::NetworkingMessages<Manager> {
         unsafe {
-            let net = sys::SteamAPI_SteamNetworkingMessages_SteamAPI_v002();
+            let net = sys::SteamAPI_SteamGameServerNetworkingMessages_SteamAPI_v002();
             debug_assert!(!net.is_null());
             networking_messages::NetworkingMessages {
                 net,
