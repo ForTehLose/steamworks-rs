@@ -308,7 +308,7 @@ where
     /// Returns an accessor to the steam networking interface
     pub fn networking(&self) -> Networking<Manager> {
         unsafe {
-            let net = sys::SteamAPI_SteamNetworking_v006();
+            let net = sys::SteamAPI_SteamGameServerNetworking_v006();
             debug_assert!(!net.is_null());
             Networking {
                 net: net,
